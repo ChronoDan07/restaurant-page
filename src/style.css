@@ -1,0 +1,279 @@
+@font-face {
+    font-family: "Norse";
+    src: url("./Norse-KaWl.otf");
+}
+
+@font-face {
+    font-family: "Norse-Bold";
+    src: url("./NorseBold-2Kge.otf");
+}
+
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+}
+
+header {
+    background-color: rgb(223, 223, 230);
+    display: grid;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+nav {
+    background-color: #333;
+    /* padding: 20px; */
+    height: 100%;
+    text-align: center;
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+    grid-template-columns: repeat(5, max-content);
+}
+
+#logo{
+    
+    color: #cbcaca;
+    display: flex;
+}
+
+#title{
+    font-size: 6vh;
+    justify-content: flex-start;
+    font-family: Norse-Bold;
+    user-select: none;
+    
+}
+
+button {
+    background: none;
+    border: none;
+    margin: 0;
+    color: #cbcaca; 
+    padding: 0.75vw;
+    font-size: 5vh;
+    font-family: Norse;
+}
+
+button:active {
+    box-shadow: 0 5px #000;
+    transform: translateY(-4px);
+}
+
+button:hover{
+    background-color: #212020;
+}
+
+.content {
+    display: grid;
+    background-color: blanchedalmond;
+    /* padding: 20px; */
+    overflow-y: auto; 
+    padding-bottom: 80px;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-box{
+    display: grid;
+    border: #000 solid;
+    box-shadow: 15px 15px gray;
+    background-color: white;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 15px;
+    gap: 15px;
+}
+
+.content-area{
+    border: 4px solid black;
+    border-radius: 15px;
+    display: grid;
+    padding: 25px;
+    gap: 15px;
+    
+}
+
+
+.menu{
+    grid-template-areas:
+        "food text"
+        "food text"
+        "food text"
+        "food text"
+        "food text"
+    ;
+}
+
+
+
+.box{
+    display: grid;
+    border: 4px solid black;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./images/wood.jpg");
+}
+
+.image{
+    grid-area: "food";
+    height: auto;
+    width: 300px;
+}
+
+
+.title-box{
+    padding: 8px;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 900;
+    font-family: Norse;
+}
+
+.desc-box{
+    font-size: 25px;
+}
+
+.menu>.text-box{
+    border: 4px solid black;
+    display: grid;
+    grid-template-columns: 1fr;
+    white-space: pre-line;
+    grid-template-rows: repeat(4,max-content);
+    gap: 1vw;
+    padding: 8px;
+}
+
+.home>.text-box{
+    border: 4px solid black;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 1fr;
+    white-space: pre-line;
+    gap: 1vw;
+    padding: 8px;
+    width: 35vw;
+    line-height: 1.5;
+    
+}
+
+.home .desc-box{
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+/* .home .title-box{
+    font-size: 35px;
+    
+} */
+
+.home .desc-box{
+    font-size: 27px;
+}
+
+
+.contact form{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    margin: 50px;
+    gap: 12px;
+    /* text-align: center; */
+}
+
+textarea{
+    font-size: 15px;
+}
+
+form button{
+    background-color: #f4eded;
+    border: none;
+    border-radius: 15px;
+    margin: 0;
+    color: #000000; 
+    padding: 10px 30px 10px 30px;
+    /* width: 5vw; */
+    font-size: 25px;
+    justify-self: center;
+
+}
+
+form button:active {
+    box-shadow: 0 5px #000;
+    transform: translateY(-4px);
+}
+
+form button:hover{
+    background-color: #212020;
+    color: #cbcaca; 
+}
+
+.contact .text-box{
+    border: 4px solid black;
+    border-radius: 15px;
+}
+
+.map-box{
+    display: grid;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.map{
+    border: black solid;
+    height: 35vh;
+    width: 20vw;
+    border-radius: 15px;
+}
+
+input{
+    font-size: 22px;
+}
+
+input:invalid{
+    border-color: red;
+    background-color: rgb(232, 146, 146);
+ }
+ 
+ input:valid {
+    border-color: green;
+    background-color: rgb(124, 219, 124);
+  }
+
+
+.ingred-title{
+    font-size: 25px;
+}
+
+.ingred-desc{
+    font-size: 25px;
+    padding-bottom: 1vw;
+}
+
+footer {
+    background-color: #333; 
+    color: #cbcaca; 
+    padding: 20px; 
+    text-align: center; 
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); 
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 1;
+}
+
+

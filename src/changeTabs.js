@@ -7,6 +7,14 @@ import img5 from "./images/viking flat bread.png"
  export function changeTabs(tab=0, content){
 
     const images = [img1, img2, img3, img4, img5];
+    const buttons = document.querySelectorAll("button");
+
+    buttons.forEach((button) => {
+        button.addEventListener('click', (event) => {
+          buttons.forEach((b) => b.classList.remove('toggled'));
+          event.currentTarget.classList.add('toggled');
+        });
+      });
 
     const contentBox = document.createElement('div')
     contentBox.classList.add("content-box");
@@ -123,7 +131,7 @@ import img5 from "./images/viking flat bread.png"
         mapBox.classList.add("map-box");
         mapBox.textContent = "Where to find us:"
         map.classList.add("map");
-        map.src = "https:\/\/www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3992678.878418622!2d8.192569831912815!3d61.270592660496334!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sro!4v1724855696939!5m2!1sen!2sro";
+        map.src = "https:\/\/www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3891285.499031573!2d11.58220967086839!3d61.56101519424819!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sro!4v1736699405961!5m2!1sen!2sro";
         title.textContent = "About Us";
         text1.textContent = "Welcome to Valhalla Feast, where we bring the bold flavors of Viking cuisine to life. Our passion lies in recreating the hearty meals that fueled Norse warriors, using traditional recipes and fresh ingredients. Each dish, from savory stews to crisp flatbreads, offers a taste of ancient Nordic culture.";
         text2.textContent = "At Valhalla Feast, we\’re more than just a restaurant—we\’re a gathering place for those who love good food and great company. Join us for a meal, share in the Viking spirit, and experience a feast fit for the gods.";

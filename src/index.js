@@ -14,7 +14,9 @@ content.classList.add("content");
 document.body.appendChild(content);
 document.body.appendChild(footer);
 
-
+setTimeout(() => {
+    bt1.click()
+}, 0);
 
 changeTabs(0,content);
 window.addEventListener('scroll', adjustFooterPosition);
@@ -36,6 +38,8 @@ bt3.addEventListener('click', () => {
 bt4.addEventListener('click', () => {
     changeTabs(3,content)
 });
+
+
 
 
 
